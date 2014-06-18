@@ -6,8 +6,5 @@
 //  Copyright (c) 2014 Michal Konturek. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface MKEventKit : NSObject
-
-@end
+#import "EKEvent+MK.h"
+#import "EKEventStore.h"
