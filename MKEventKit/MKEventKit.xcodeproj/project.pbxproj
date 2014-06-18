@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F375E586BEB46F0BC82339D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F21538552D41B68590C4BA /* libPods.a */; };
-		8427BC34195195D200A242E9 /* EKEvent+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427BC33195195D200A242E9 /* EKEvent+MK.m */; };
 		8427BC36195195ED00A242E9 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8427BC35195195ED00A242E9 /* EventKit.framework */; };
-		8427BC3919519BAD00A242E9 /* EKEventStore+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427BC3819519BAD00A242E9 /* EKEventStore+MK.m */; };
+		8427BC401951CBCD00A242E9 /* EKEvent+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427BC3C1951CBCD00A242E9 /* EKEvent+MK.m */; };
+		8427BC411951CBCD00A242E9 /* EKEventStore+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427BC3E1951CBCD00A242E9 /* EKEventStore+MK.m */; };
 		8F9D07903B5C4F09AB76ED6F /* libPods-MKEventKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978284EEDD39434CA13ADAA3 /* libPods-MKEventKitTests.a */; };
 		90E8467B194FA2BC00F404CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E8467A194FA2BC00F404CD /* Foundation.framework */; };
 		90E8467D194FA2BC00F404CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E8467C194FA2BC00F404CD /* CoreGraphics.framework */; };
@@ -39,12 +39,12 @@
 /* Begin PBXFileReference section */
 		1EFC68391F184041B2671E63 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		75BC1C173B4449898E075E53 /* Pods-MKEventKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKEventKitTests.xcconfig"; path = "Pods/Pods-MKEventKitTests.xcconfig"; sourceTree = "<group>"; };
-		8427BC2F1951959000A242E9 /* MKEventKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKEventKit.h; sourceTree = "<group>"; };
-		8427BC32195195D200A242E9 /* EKEvent+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EKEvent+MK.h"; sourceTree = "<group>"; };
-		8427BC33195195D200A242E9 /* EKEvent+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EKEvent+MK.m"; sourceTree = "<group>"; };
 		8427BC35195195ED00A242E9 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		8427BC3719519BAD00A242E9 /* EKEventStore+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EKEventStore+MK.h"; sourceTree = "<group>"; };
-		8427BC3819519BAD00A242E9 /* EKEventStore+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EKEventStore+MK.m"; sourceTree = "<group>"; };
+		8427BC3B1951CBCD00A242E9 /* EKEvent+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EKEvent+MK.h"; sourceTree = "<group>"; };
+		8427BC3C1951CBCD00A242E9 /* EKEvent+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EKEvent+MK.m"; sourceTree = "<group>"; };
+		8427BC3D1951CBCD00A242E9 /* EKEventStore+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EKEventStore+MK.h"; sourceTree = "<group>"; };
+		8427BC3E1951CBCD00A242E9 /* EKEventStore+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EKEventStore+MK.m"; sourceTree = "<group>"; };
+		8427BC3F1951CBCD00A242E9 /* MKEventKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKEventKit.h; sourceTree = "<group>"; };
 		90E84677194FA2BC00F404CD /* MKEventKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKEventKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E8467A194FA2BC00F404CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90E8467C194FA2BC00F404CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,16 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8427BC2E1951955900A242E9 /* Source */ = {
+		8427BC3A1951CBCD00A242E9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8427BC2F1951959000A242E9 /* MKEventKit.h */,
-				8427BC32195195D200A242E9 /* EKEvent+MK.h */,
-				8427BC33195195D200A242E9 /* EKEvent+MK.m */,
-				8427BC3719519BAD00A242E9 /* EKEventStore+MK.h */,
-				8427BC3819519BAD00A242E9 /* EKEventStore+MK.m */,
+				8427BC3F1951CBCD00A242E9 /* MKEventKit.h */,
+				8427BC3B1951CBCD00A242E9 /* EKEvent+MK.h */,
+				8427BC3C1951CBCD00A242E9 /* EKEvent+MK.m */,
+				8427BC3D1951CBCD00A242E9 /* EKEventStore+MK.h */,
+				8427BC3E1951CBCD00A242E9 /* EKEventStore+MK.m */,
 			);
-			path = Source;
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 		90E8466E194FA2BC00F404CD = {
@@ -142,7 +143,7 @@
 		90E84680194FA2BC00F404CD /* MKEventKit */ = {
 			isa = PBXGroup;
 			children = (
-				8427BC2E1951955900A242E9 /* Source */,
+				8427BC3A1951CBCD00A242E9 /* Source */,
 				90E84689194FA2BC00F404CD /* AppDelegate.h */,
 				90E8468A194FA2BC00F404CD /* AppDelegate.m */,
 				90E8468C194FA2BC00F404CD /* Images.xcassets */,
@@ -342,10 +343,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8427BC34195195D200A242E9 /* EKEvent+MK.m in Sources */,
 				90E8468B194FA2BC00F404CD /* AppDelegate.m in Sources */,
+				8427BC401951CBCD00A242E9 /* EKEvent+MK.m in Sources */,
+				8427BC411951CBCD00A242E9 /* EKEventStore+MK.m in Sources */,
 				90E84687194FA2BC00F404CD /* main.m in Sources */,
-				8427BC3919519BAD00A242E9 /* EKEventStore+MK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
