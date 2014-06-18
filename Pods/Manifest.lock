@@ -1,0 +1,45 @@
+PODS:
+  - Kiwi/ARC (2.2.4)
+  - Kiwi/NonARC (2.2.4)
+  - Kiwi/XCTest (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - MKFoundationKit (1.2.2):
+    - MKFoundationKit/AutoDescribe
+    - MKFoundationKit/Base64
+    - MKFoundationKit/Block
+    - MKFoundationKit/NSArray
+    - MKFoundationKit/NSBundle
+    - MKFoundationKit/NSDate
+    - MKFoundationKit/NSDictionary
+    - MKFoundationKit/NSNumber
+    - MKFoundationKit/NSObject
+    - MKFoundationKit/NSSet
+    - MKFoundationKit/NSString
+    - MKFoundationKit/Queue
+    - MKFoundationKit/Stack
+  - MKFoundationKit/AutoDescribe (1.2.2)
+  - MKFoundationKit/Base64 (1.2.2)
+  - MKFoundationKit/Block (1.2.2)
+  - MKFoundationKit/NSArray (1.2.2)
+  - MKFoundationKit/NSBundle (1.2.2)
+  - MKFoundationKit/NSDate (1.2.2)
+  - MKFoundationKit/NSDictionary (1.2.2)
+  - MKFoundationKit/NSNumber (1.2.2)
+  - MKFoundationKit/NSObject (1.2.2)
+  - MKFoundationKit/NSSet (1.2.2):
+    - MKFoundationKit/Block
+  - MKFoundationKit/NSString (1.2.2):
+    - MKFoundationKit/Base64
+  - MKFoundationKit/Queue (1.2.2)
+  - MKFoundationKit/Stack (1.2.2)
+
+DEPENDENCIES:
+  - Kiwi/XCTest (>= 2.2.1)
+  - MKFoundationKit (~> 1.2.2)
+
+SPEC CHECKSUMS:
+  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  MKFoundationKit: f8a268133483c1aa686f208d3944624cc0e68dd2
+
+COCOAPODS: 0.33.1
