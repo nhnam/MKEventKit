@@ -62,6 +62,19 @@
     return events;
 }
 
++ (void)mk_removeEventsForDate:(NSDate *)date {
+    id startDate = [date mk_dateWithoutTime];
+    id endDate = [[[date mk_dateWithoutTime] mk_dateByAddingHours:23] mk_dateByAddingMinutes:59];
+    [self mk_removeEventsFrom:startDate to:endDate];
+}
+
++ (void)mk_removeEventsFrom:(NSDate *)from to:(NSDate *)to {
+    id events = [self mk_eventsFrom:from to:to];
+    for (id event in events) {
+        [event mk_remove];
+    }
+}
+
 - (void)mk_save {
     [[EKEventStore mk_registeredEventStore] saveEvent:self span:EKSpanThisEvent error:nil];
 }

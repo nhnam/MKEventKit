@@ -25,6 +25,9 @@
 + (NSArray *)mk_eventsForDate:(NSDate *)date;
 + (NSArray *)mk_eventsFrom:(NSDate *)from to:(NSDate *)to;
 
++ (void)mk_removeEventsForDate:(NSDate *)date;
++ (void)mk_removeEventsFrom:(NSDate *)from to:(NSDate *)to;
+
 - (void)mk_save;
 - (void)mk_remove;
 
