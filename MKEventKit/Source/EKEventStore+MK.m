@@ -8,6 +8,24 @@
 
 #import "EKEventStore+MK.h"
 
+static EKEventStore *_registeredEventStore;
+
 @implementation EKEventStore (MK)
+
++ (void)mk_registerEventStore:(EKEventStore *)store {
+    _registeredEventStore = store;
+}
+
++ (void)mk_deregisterEventStore {
+    [self mk_registerEventStore:nil];
+}
+
++ (instancetype)mk_registeredEventStore {
+    return _registeredEventStore;
+}
+
++ (BOOL)isAccessAuthorized {
+    return ([self authorizationStatusForEntityType:EKEntityTypeEvent] == EKAuthorizationStatusAuthorized);
+}
 
 @end

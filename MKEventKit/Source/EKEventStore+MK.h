@@ -10,4 +10,11 @@
 
 @interface EKEventStore (MK)
 
++ (void)mk_registerEventStore:(EKEventStore *)store;
++ (void)mk_deregisterEventStore;
+
++ (instancetype)mk_registeredEventStore;
+
++ (BOOL)isAccessAuthorized;
+
 @end
