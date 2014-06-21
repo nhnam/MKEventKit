@@ -24,7 +24,7 @@ static EKEventStore *_registeredEventStore;
     return _registeredEventStore;
 }
 
-+ (BOOL)isAccessAuthorized {
++ (BOOL)mk_isAccessAuthorized {
     return ([self authorizationStatusForEntityType:EKEntityTypeEvent] == EKAuthorizationStatusAuthorized);
 }
 
