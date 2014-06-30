@@ -16,5 +16,6 @@
 + (instancetype)mk_registeredEventStore;
 
 + (BOOL)mk_isAccessAuthorized;
++ (BOOL)mk_hasRegisteredEventStore;
 
 @end

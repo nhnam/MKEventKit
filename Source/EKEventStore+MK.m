@@ -28,4 +28,8 @@ static EKEventStore *_registeredEventStore;
     return ([self authorizationStatusForEntityType:EKEntityTypeEvent] == EKAuthorizationStatusAuthorized);
 }
 
++ (BOOL)mk_hasRegisteredEventStore {
+    return ([self mk_registeredEventStore] != nil);
+}
+
 @end
