@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "MKEventKit"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Simplifies manipulation of iOS calendar events."
   s.homepage     = "https://github.com/michalkonturek/MKEventKit"
   s.license      = 'MIT'

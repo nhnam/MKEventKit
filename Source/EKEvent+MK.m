@@ -21,6 +21,7 @@
     event.calendar = [[EKEventStore mk_registeredEventStore] defaultCalendarForNewEvents];
     event.startDate = startDate;
     event.endDate = [startDate mk_dateByAddingMinutes:duration];
+    event.title = title;
     return event;
 }
 
@@ -34,6 +35,13 @@
 
 + (instancetype)mk_eventWithID:(NSString *)identifier {
     return [[EKEventStore mk_registeredEventStore] eventWithIdentifier:identifier];
+}
+
++ (NSArray *)mk_eventsForTodayFromNow {
+    id date = [NSDate date];
+    id startDate = date;
+    id endDate = [[[date mk_dateWithoutTime] mk_dateByAddingHours:23] mk_dateByAddingMinutes:59];
+    return [self mk_eventsFrom:startDate to:endDate];
 }
 
 + (NSArray *)mk_eventsForToday {
@@ -62,6 +70,10 @@
     return events;
 }
 
++ (void)mk_removeEventsForToday {
+    [self mk_removeEventsForDate:[NSDate date]];
+}
+
 + (void)mk_removeEventsForDate:(NSDate *)date {
     id startDate = [date mk_dateWithoutTime];
     id endDate = [[[date mk_dateWithoutTime] mk_dateByAddingHours:23] mk_dateByAddingMinutes:59];
@@ -81,6 +93,22 @@
 
 - (void)mk_remove {
     [[EKEventStore mk_registeredEventStore] removeEvent:self span:EKSpanThisEvent error:nil];
+}
+
+- (NSInteger)mk_durationUntilStartInSeconds {
+    NSDateComponents *difference = [[NSCalendar currentCalendar] components:NSSecondCalendarUnit
+                                                                   fromDate:[NSDate date]
+                                                                     toDate:self.startDate
+                                                                    options:0];
+    return [difference second];
+}
+
+- (NSInteger)mk_durationUntilEndInSeconds {
+    NSDateComponents *difference = [[NSCalendar currentCalendar] components:NSSecondCalendarUnit
+                                                                   fromDate:[NSDate date]
+                                                                     toDate:self.endDate
+                                                                    options:0];
+    return [difference second];
 }
 
 @end

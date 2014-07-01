@@ -7,4 +7,4 @@
 //
 
 #import "EKEvent+MK.h"
-#import "EKEventStore.h"
+#import "EKEventStore+MK.h"
